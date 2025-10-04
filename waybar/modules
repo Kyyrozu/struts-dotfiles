@@ -33,8 +33,6 @@
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "persistent-workspaces":{
-        "HDMI-A-1": [ 1 ],
-        "DP-3": [ 2 ]
     },
     "format-icons": {
       "1": "I",
