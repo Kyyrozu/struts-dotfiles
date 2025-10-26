@@ -37,20 +37,5 @@
     "icon-size": 20,
     "on-click": "wlogout -C $HOME/.config/wlogout/nova.css -l $HOME/.config/wlogout/layout -b 5 -B 400 -T 400",
     "tooltip": false
-  },
-
-  "clock": {
-    "format": "{:%H:%M - %d/%b}", // 24H
-    "tooltip-format": "<span>{calendar}</span>",
-    "calendar": {
-      "mode": "month",
-      "on-scroll": 1,
-      "format": {
-        "months": "<span color='#ff6699'><b>{}</b></span>",
-        "days": "<span color='#cdd6f4'><b>{}</b></span>",
-        "weekdays": "<span color='#7CD37C'><b>{}</b></span>",
-        "today": "<span color='#ffcc66'><b>{}</b></span>"
-      }
-    }
   }
 }
