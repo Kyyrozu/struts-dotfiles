@@ -18,7 +18,7 @@
 }
 {
     "label" : "sleep",
-    "action" : "",
+    "action" : "systemctl suspend && hyprlock",
     "text" : "Sleep",
 }
 {
