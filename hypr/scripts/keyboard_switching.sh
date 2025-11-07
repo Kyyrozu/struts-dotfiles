@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Run hyprctl and capture its JSON output
+json=$(hyprctl devices -j)
+
+# Use jq to find the active_layout_index of the main keyboard
+# -r prints raw output (no quotes)
+active_index=$(echo "$json" |
+    jq -r '
+        .keyboards[]                     # iterate over each keyboard object
+        | select(.main == true)   # keep only the one we want
+        .active_layout_index            # output the field we care about
+    ')
+
+# If nothing was found, jq will emit null → handle that gracefully
+if [[ -z "$active_index" || "$active_index" == "null" ]]; then
+    echo "Keyboard \"logitech-pro-k/da\" not found."
+    exit 1
+fi
+
+echo "active_layout_index = $active_index"
+
+if [[ "$active_index" -eq 0 ]]; then
+    hyprctl switchxkblayout current 1
+    gpro-led -a dd0000
+elif [[ "$active_index" -eq 1 ]]; then
+    hyprctl switchxkblayout current 0
+    gpro-led -a 8d24bf
+else
+    notify-send "Couldn't switch keyboard layout"
+fi
