@@ -12,14 +12,6 @@ active_index=$(echo "$json" |
         .active_layout_index            # output the field we care about
     ')
 
-# If nothing was found, jq will emit null → handle that gracefully
-if [[ -z "$active_index" || "$active_index" == "null" ]]; then
-    echo "Keyboard \"logitech-pro-k/da\" not found."
-    exit 1
-fi
-
-echo "active_layout_index = $active_index"
-
 if [[ "$active_index" -eq 0 ]]; then
     hyprctl switchxkblayout current 1
     gpro-led -a dd0000
