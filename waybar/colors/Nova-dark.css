@@ -85,7 +85,6 @@ window#waybar.hidden {
   color: @cursor;
 }
 
-#tray menu menuitem:hover,
 #pulseaudio:hover,
 #custom-power:hover,
 #custom-swaync:hover {
