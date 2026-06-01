@@ -294,3 +294,7 @@ window#waybar.hidden {
   min-width: 10px;
   border-radius: 5px;
 }
+
+#language {
+  color: @cursor;
+}

@@ -14,10 +14,10 @@ active_index=$(echo "$json" |
 
 if [[ "$active_index" -eq 0 ]]; then
     hyprctl switchxkblayout current 1
-    gpro-led -a dd0000
+    notify-send "Switched layout to qwerty"
 elif [[ "$active_index" -eq 1 ]]; then
     hyprctl switchxkblayout current 0
-    gpro-led -a 8d24bf
+    notify-send "Switched laybout to bepo"
 else
     notify-send "Couldn't switch keyboard layout"
 fi
