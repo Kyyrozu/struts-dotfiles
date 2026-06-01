@@ -131,6 +131,11 @@
             "(.*) - kitty": "> [$1]"
         }
     },
+    "hyprland/language": {
+	"format-en": "qwerty",
+	"format-fr": "bepo",
+	"on-click": "~/.config/hypr/scripts/keyboard_switching.sh",
+    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -175,6 +180,18 @@
         // "ignored-players": ["firefox"]
         "max-length": 30
     },
+	"network": {
+		"interval": 1,
+		"format": "{ifname}",
+		"format-wifi": "{ipaddr} ",
+		"format-ethernet": "{ipaddr} ",
+		"format-disconnected": "󰌙",
+		"tooltip-format": "{ifname}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+		"tooltip-format-wifi": "{essid}   {bandwidthUpBytes}  {bandwidthDownBytes} ",
+		"tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "󰌙 Disconnected",
+		"max-length": 50
+	},
     "network#speed": {
         "interval": 1,
         "format": "{ifname}",

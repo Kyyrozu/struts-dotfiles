@@ -18,7 +18,11 @@
 
   "modules-right": [
     "tray",
+	"custom/separator#blank",
+	"network",
     "custom/separator#blank_2",
+    "hyprland/language",
+    "custom/separator#blank",
     "group/motherboard",
     "custom/separator#blank",
     "group/audio",
