@@ -2,14 +2,14 @@
   "include": "~/.config/waybar/modules",
   "layer": "top",
   "position": "top",
-  "height": 12,
+  "height": 33,
   "margin-left": 1,
   "margin-right": 1,
   "margin-top": 2,
+  "spacing": 10,
 
   "modules-left": [
     "clock",
-    "custom/separator#blank",
     "hyprland/window",
     "hyprland/submap"
   ],
@@ -18,17 +18,11 @@
 
   "modules-right": [
     "tray",
-	"custom/separator#blank",
 	"network",
-    "custom/separator#blank_2",
     "hyprland/language",
-    "custom/separator#blank",
     "group/motherboard",
-    "custom/separator#blank",
     "group/audio",
-    "custom/separator#blank",
     "custom/swaync",
-    "custom/separator#margin",
     "custom/power"
   ],
 
@@ -39,5 +33,5 @@
     "icon-size": 20,
     "on-click": "wlogout -C $HOME/.config/wlogout/nova.css -l $HOME/.config/wlogout/layout -b 5 -B 400 -T 400",
     "tooltip": false
-  }
+  },
 }
