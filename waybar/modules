@@ -55,7 +55,7 @@
         "orientation": "horizontal",
         "modules": [
             "pulseaudio",
-            "pulseaudio#microphone"
+			"pulseaudio#microphone"
         ]
     },
     "bluetooth": {
@@ -265,8 +265,7 @@
     },
     "tray": {
         "icon-size": 15,
-        "spacing": 8,
-}
+        "spacing": 8
     },
     "wireplumber": {
         "format": "{icon} {volume} %",
