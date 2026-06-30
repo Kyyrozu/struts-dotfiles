@@ -46,15 +46,7 @@ map("", "w", "l")
 map("n", "n", "nzz")
 map("n", "N", "Nzz")
 
--- If you strictly need recursive behavior for the search centering, you would write:
--- map("n", "n", "nzz", { remap = true })
-
 map("n", "<leader>es", vim.cmd.Ex)
 
--- open buffer on "go to declaration" input
-map('n', 'gD', function()
-	-- Open a vertical split and jump to declaration
-	vim.cmd('vsplit')
-	vim.lsp.buf.definition()
-end, { desc = 'Go to Definition (New Tab)' })
+map("n", "<leader>r", vim.lsp.buf.rename)
 map('n', 'gi', vim.lsp.buf.implementation, { desc = 'Go to Implementation' })
