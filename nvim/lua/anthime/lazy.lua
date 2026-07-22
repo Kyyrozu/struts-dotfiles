@@ -20,5 +20,7 @@ require("lazy").setup({
   spec = {
     { import = "anthime.plugins" },
   },
-  checker = { enabled = true },
-}) 
+  checker = {
+	  enabled = true, notify = false
+  },
+})
