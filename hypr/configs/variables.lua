@@ -22,7 +22,7 @@ hl.env("GBM_BACKEND", "nvidia-drm")
 
 hl.config({
     input = {
-        kb_layout = "fr",
+        kb_layout = "fr,us",
         kb_variant = "bepo",
         kb_model = "pc105",
         kb_options = "caps:escape",
@@ -30,7 +30,7 @@ hl.config({
 
         follow_mouse = 1,
 
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+        sensitivity = -0.7, -- -1.0 - 1.0, 0 means no modification.
 
         touchpad = {
             natural_scroll = true,

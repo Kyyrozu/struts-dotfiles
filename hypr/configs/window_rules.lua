@@ -1,12 +1,4 @@
--- Ignore maximize requests from apps. You'll probably like this.
-hl.window_rule({
-    name = "suppress-maximize-events",
-    match = { class = ".*" },
-
-    suppress_event = "maximize",
-})
-
--- Fix some dragging issues with XWayland
+-- Fix some dragging issues with XWayland -- MIGHT NOT BE REQUIRED ANYMORE
 hl.window_rule({
     name = "fix-xwayland-drags",
     match = {
@@ -26,3 +18,31 @@ hl.on("window.open", function(w)
         hl.dispatch(hl.dsp.window.kill({ window = w }))
     end
 end)
+
+hl.workspace_rule({workspace = "1", monitor = "HDMI-A-1"})
+hl.workspace_rule({workspace = "3", monitor = "DP-1"})
+hl.workspace_rule({workspace = "10", monitor = "HDMI-A-1"})
+
+-- Smart gaps -- settings from the wiki
+hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
+hl.workspace_rule({ workspace = "f[1]", gaps_out = 0, gaps_in = 0 })
+hl.window_rule({ match = { float = false, workspace = "w[tv1]" }, border_size = 0 })
+hl.window_rule({ match = { float = false, workspace = "w[tv1]" }, rounding = 0 })
+hl.window_rule({ match = { float = false, workspace = "f[1]" }, border_size = 0 })
+hl.window_rule({ match = { float = false, workspace = "f[1]" }, rounding = 0 })
+
+hl.window_rule({
+	name = "set signal workspace",
+	match = { class = "org.signal.Signal" },
+	workspace = "1"
+})
+hl.window_rule({
+	name = "set discord workspace",
+	match = { class = "discord" },
+	workspace = "1"
+})
+hl.window_rule({
+	name = "set spotify workspace",
+	match = { class = "spotify" },
+	workspace = "10"
+})

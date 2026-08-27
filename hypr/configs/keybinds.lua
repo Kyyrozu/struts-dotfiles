@@ -13,6 +13,8 @@ hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("pkill " .. menu .. " || " .. men
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("flatpak run app.zen_browser.zen"))
 hl.bind(mainMod .. " + P", hl.dsp.layout("togglesplit")) -- dwindle only
 
+hl.bind(mainMod .. " + E", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+
 hl.bind(mainMod .. " + t", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + s", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + r", hl.dsp.focus({ direction = "up" }))
